@@ -13,6 +13,15 @@ import tensorflow as tf
 import os,urllib
 import librosa # to extract speech features
 
+import os
+
+print("Current working directory:", os.getcwd())  # check path
+model.save("mymodel_v2.h5")  # saves here
+
+model.save("mymodel_v2")  # saves as folder, not .h5
+
+model = tf.keras.models.load_model("mymodel_v2")
+
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout, Masking
