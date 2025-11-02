@@ -12,6 +12,14 @@ import numpy as np
 import tensorflow as tf
 import os,urllib
 import librosa # to extract speech features
+import tensorflow as tf
+
+# Save model as a folder (recommended for Python 3.13 / Streamlit Cloud)
+model.save("mymodel_v2")  # note: no .h5 extension
+print("✅ Model saved successfully in 'mymodel_v2/' folder")
+
+# Later, to load the model
+model = tf.keras.models.load_model("mymodel_v2")
 
 import os
 
